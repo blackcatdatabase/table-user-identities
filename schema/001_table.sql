@@ -1,4 +1,4 @@
--- Auto-generated from schema-map.psd1 (map@1e83bb6)
+-- Auto-generated from schema-map.psd1 (map@6cefe8e)
 -- table: user_identities
 CREATE TABLE IF NOT EXISTS user_identities (
   id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
