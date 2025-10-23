@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace BlackCat\Database\Packages\UserIdentities\Service;
 
-use BlackCat\Core\Database\Database;
+use BlackCat\Core\Database;
 use BlackCat\Database\Packages\UserIdentities\Dto\UserIdentityDto;
 use BlackCat\Database\Packages\UserIdentities\Mapper\UserIdentityDtoMapper;
 use BlackCat\Database\Packages\UserIdentities\Repository\UserIdentityRepository;
