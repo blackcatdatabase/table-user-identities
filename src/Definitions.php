@@ -6,7 +6,7 @@ namespace BlackCat\Database\Packages\UserIdentities;
 final class Definitions {
     // --- základní metadata ---
     public static function table(): string { return 'user_identities'; }
-    public static function contractView(): string { return 'v_user_identities_contract'; }
+    public static function contractView(): string { return 'vw_user_identities'; }
     /** @return string[] */
     public static function columns(): array { return [ 'id', 'user_id', 'provider', 'provider_user_id', 'created_at', 'updated_at' ]; }
     public static function pk(): string { return 'id'; }
