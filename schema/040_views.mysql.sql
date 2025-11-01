@@ -1,8 +1,8 @@
--- Auto-generated from schema-views-mysql.psd1 (map@38d5403)
+-- Auto-generated from schema-views-mysql.psd1 (map@c5e4097)
 -- engine: mysql
 -- table:  user_identities
 -- Contract view for [user_identities]
-CREATE OR REPLACE SQL SECURITY INVOKER VIEW vw_user_identities AS
+CREATE OR REPLACE ALGORITHM=MERGE SQL SECURITY INVOKER VIEW vw_user_identities AS
 SELECT
   id,
   user_id,
