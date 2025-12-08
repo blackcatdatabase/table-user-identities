@@ -5,11 +5,11 @@ External identity links (OAuth/OpenID/etc.). One row per (provider, provider_use
 ## Columns
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
-| created_at | TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |
+| created_at | DATETIME(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |
 | id | BIGINT | NO |  | Surrogate primary key. |
 | provider | VARCHAR(100) | NO |  | Provider key (e.g., google, github). Part of UNIQUE (provider, provider_user_id). |
 | provider_user_id | VARCHAR(255) | NO |  | User id at provider. Part of UNIQUE (provider, provider_user_id). |
-| updated_at | TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Update timestamp (UTC). |
+| updated_at | DATETIME(6) | NO | CURRENT_TIMESTAMP(6) | Update timestamp (UTC). |
 | user_id | BIGINT | NO |  | User (FK users.id). |
 
 ## Engine Details
@@ -55,5 +55,5 @@ Foreign keys:
 ## Views
 | View | Engine | Flags | File |
 | --- | --- | --- | --- |
-| vw_user_identities | mysql | algorithm=MERGE, security=INVOKER | [packages\user-identities\schema\040_views.mysql.sql](https://github.com/blackcatacademy/blackcat-database/packages/user-identities/schema/040_views.mysql.sql) |
-| vw_user_identities | postgres |  | [packages\user-identities\schema\040_views.postgres.sql](https://github.com/blackcatacademy/blackcat-database/packages/user-identities/schema/040_views.postgres.sql) |
+| vw_user_identities | mysql | algorithm=MERGE, security=INVOKER | [schema\040_views.mysql.sql](schema\040_views.mysql.sql) |
+| vw_user_identities | postgres |  | [schema\040_views.postgres.sql](schema\040_views.postgres.sql) |
