@@ -5,11 +5,11 @@ External identity links (OAuth/OpenID/etc.). One row per (provider, provider_use
 ## Columns
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
-| created_at | DATETIME(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |
+| created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |
 | id | BIGINT | NO |  | Surrogate primary key. |
 | provider | VARCHAR(100) | NO |  | Provider key (e.g., google, github). Part of UNIQUE (provider, provider_user_id). |
 | provider_user_id | VARCHAR(255) | NO |  | User id at provider. Part of UNIQUE (provider, provider_user_id). |
-| updated_at | DATETIME(6) | NO | CURRENT_TIMESTAMP(6) | Update timestamp (UTC). |
+| updated_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Update timestamp (UTC). |
 | user_id | BIGINT | NO |  | User (FK users.id). |
 
 ## Engine Details
