@@ -3,14 +3,14 @@
 External identity links (OAuth/OpenID/etc.). One row per (provider, provider_user_id).
 
 ## Columns
-| Column | Type | Null | Default | Description |
-| --- | --- | --- | --- | --- |
-| id | BIGINT | NO |  | Surrogate primary key. |
-| user_id | BIGINT | NO |  | User (FK users.id). |
-| provider | VARCHAR(100) | NO |  | Provider key (e.g., google, github). Part of UNIQUE (provider, provider_user_id). |
-| provider_user_id | VARCHAR(255) | NO |  | User id at provider. Part of UNIQUE (provider, provider_user_id). |
-| created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |
-| updated_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Update timestamp (UTC). |
+| Column | Type | Null | Default | Description | Crypto |
+| --- | --- | --- | --- | --- | --- |
+| id | BIGINT | NO |  | Surrogate primary key. |  |
+| user_id | BIGINT | NO |  | User (FK users.id). |  |
+| provider | VARCHAR(100) | NO |  | Provider key (e.g., google, github). Part of UNIQUE (provider, provider_user_id). |  |
+| provider_user_id | VARCHAR(255) | NO |  | User id at provider. Part of UNIQUE (provider, provider_user_id). |  |
+| created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |  |
+| updated_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Update timestamp (UTC). |  |
 
 ## Engine Details
 
